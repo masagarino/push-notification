@@ -13,6 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
+// require('dotenv').config();
 const app = (() => {
   'use strict';
 
@@ -84,7 +85,7 @@ const app = (() => {
     });
   }
 
-  const applicationServerPublicKey = 'BCwShOm6SPGJ2SX6zQNLR1peM26ddlEfmzT_LW-2Ckz5OINYD-6aXy8S5y0HAX7XF9vd8riP5ZYCoqULR5-c1Gs';
+  const applicationServerPublicKey = process.env.PUBLIC_KEY;
 
   function subscribeUser() {
     const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);

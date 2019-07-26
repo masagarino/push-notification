@@ -5,11 +5,15 @@
   "main": "sw.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node -r dotenv/config server.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0"
+  },
   "devDependencies": {
     "express": "^4.16.2",
     "web-push": "^3.2.5"
